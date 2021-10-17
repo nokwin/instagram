@@ -1,6 +1,6 @@
 $spacing-utils: (
   (
-    class: y,
+    class: p,
     attrs: padding-top padding-right padding-bottom padding-left,
     values: $spacers,
   ),
@@ -23,7 +23,7 @@ $spacing-utils: (
     class: gap,
     attrs: gap,
     values: $spacers,
-  )
+  ),
 );
 
 @include generate-utils($spacing-utils);

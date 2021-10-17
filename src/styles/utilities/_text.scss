@@ -3,7 +3,7 @@ $text-utils: (
     class: fw,
     attrs: font-weight,
     values: $text-weights,
-  )
+  ),
 );
 
 @include generate-utils($text-utils);
