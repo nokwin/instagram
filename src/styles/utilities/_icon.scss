@@ -1,0 +1,9 @@
+$icons-utils: (
+  (
+    class: is,
+    attrs: width height,
+    values: $spacers,
+  ),
+);
+
+@include generate-utils($icons-utils);

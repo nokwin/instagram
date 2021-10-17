@@ -1,3 +1,9 @@
-.d-flex {
-  display: flex;
-}
+$display-utils: (
+  (
+    class: d,
+    attrs: display,
+    values: $display-values,
+  ),
+);
+
+@include generate-utils($display-utils);

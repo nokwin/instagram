@@ -1,7 +1,24 @@
-.border-bottom {
-  border-bottom: 1px solid var(--color-border-primary);
-}
+$border-utils: (
+  (
+    class: border-bottom,
+    attrs: border-bottom,
+    values: $borders-values,
+  ),
+  (
+    class: border-top,
+    attrs: border-top,
+    values: $borders-values,
+  ),
+  (
+    class: rounded,
+    attrs: border-radius,
+    values: $borders-rounding,
+  ),
+  (
+    class: border,
+    attrs: border-color,
+    values: $borders-colors,
+  )
+);
 
-.rounded-circle {
-  border-radius: 50%;
-}
+@include generate-utils($border-utils);

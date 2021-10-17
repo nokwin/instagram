@@ -4,6 +4,16 @@ $text-utils: (
     attrs: font-weight,
     values: $text-weights,
   ),
+  (
+    class: fs,
+    attrs: font-size,
+    values: $spacers,
+  ),
+  (
+    class: text,
+    attrs: text-transform,
+    values: $text-transformers,
+  )
 );
 
 @include generate-utils($text-utils);

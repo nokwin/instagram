@@ -5,6 +5,11 @@ $spacing-utils: (
     values: $spacers,
   ),
   (
+    class: p-i,
+    attrs: padding-top padding-right padding-bottom padding-left,
+    values: $spacers-important,
+  ),
+  (
     class: px,
     attrs: padding-left padding-right,
     values: $spacers,
@@ -12,6 +17,16 @@ $spacing-utils: (
   (
     class: py,
     attrs: padding-top padding-bottom,
+    values: $spacers,
+  ),
+  (
+    class: ps,
+    attrs: padding-left,
+    values: $spacers-important,
+  ),
+  (
+    class: m,
+    attrs: margin-top margin-right margin-bottom margin-left,
     values: $spacers,
   ),
   (
