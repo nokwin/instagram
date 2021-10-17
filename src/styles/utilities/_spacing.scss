@@ -1,0 +1,29 @@
+$spacing-utils: (
+  (
+    class: y,
+    attrs: padding-top padding-right padding-bottom padding-left,
+    values: $spacers,
+  ),
+  (
+    class: px,
+    attrs: padding-left padding-right,
+    values: $spacers,
+  ),
+  (
+    class: py,
+    attrs: padding-top padding-bottom,
+    values: $spacers,
+  ),
+  (
+    class: mb,
+    attrs: margin-bottom,
+    values: $spacers,
+  ),
+  (
+    class: gap,
+    attrs: gap,
+    values: $spacers,
+  )
+);
+
+@include generate-utils($spacing-utils);

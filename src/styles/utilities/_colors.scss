@@ -1,0 +1,9 @@
+$colors-utils: (
+  (
+    class: text,
+    attrs: color,
+    values: $text-colors,
+  )
+);
+
+@include generate-utils($colors-utils);

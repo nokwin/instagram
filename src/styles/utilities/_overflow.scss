@@ -1,0 +1,11 @@
+$overflow-utils: (
+  (
+    class: overflow,
+    attrs: overflow,
+    values: (
+      hidden: hidden,
+    ),
+  )
+);
+
+@include generate-utils($overflow-utils);

@@ -1,0 +1,9 @@
+$background-utils: (
+  (
+    class: bg,
+    attrs: background-color,
+    values: $bg-colors,
+  )
+);
+
+@include generate-utils($background-utils);

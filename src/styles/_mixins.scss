@@ -1,0 +1,11 @@
+@mixin generate-utils($map) {
+  @each $map-item in $map {
+    @each $key, $value in map-get($map-item, "values") {
+      .#{map-get($map-item, "class")}-#{$key} {
+        @each $attr in map-get($map-item, "attrs") {
+          #{$attr}: #{$value};
+        }
+      }
+    }
+  }
+}
