@@ -15,3 +15,12 @@
 - Finished post layout for mobile view
 - Created post domain with repository, service and entity
 - Extended our utility styles
+
+## Day 2 [20.10.2021]
+
+- Added profile card component when hovering post author
+- Added actions modal
+- Added some adaptive layout for posts
+- Added camera icon to header
+- Extended utility styles
+- Extended generate-utils mixin to support imporant attribute
