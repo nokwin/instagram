@@ -1,6 +1,8 @@
 :root {
   --color-bg-primary: #fff;
   --color-bg-secondary: #fafafa;
+  --color-bg-black-65: rgba(0, 0, 0, .65);
+  --color-bg-white-10: rgba(0, 0, 0, .1);
 
   --color-border-primary: #dbdbdb;
   --color-border-secondary: #efefef;
@@ -8,6 +10,7 @@
   --color-font-primary: #262626;
   --color-font-secondary: #8e8e8e;
   --color-font-blue: #0095f6;
+  --color-font-red: #ed4956;
 }
 
 $spacers: (
@@ -22,21 +25,10 @@ $spacers: (
   8: 2rem,
 );
 
-$spacers-important: (
-  0: "0 !important",
-  1: "0.25rem !important",
-  2: "0.5rem !important",
-  3: "0.75rem !important",
-  4: "1rem !important",
-  5: "1.25rem !important",
-  6: "1.5rem !important",
-  7: "1.75rem !important",
-  8: "2rem !important",
-);
-
 $bg-colors: (
   primary: var(--color-bg-primary),
   secondary: var(--color-bg-secondary),
+  black-65: var(--color-bg-black-65),
 );
 
 $bg-size-values: (
@@ -47,6 +39,7 @@ $text-colors: (
   primary: var(--color-font-primary),
   secondary: var(--color-font-secondary),
   blue: var(--color-font-blue),
+  red: var(--color-font-red),
 );
 
 $text-weights: (
@@ -89,14 +82,10 @@ $borders-colors: (
   secondary: var(--color-border-secondary),
 );
 
-$borders-colors-important: (
-  primary: "var(--color-border-primary) !important",
-  secondary: "var(--color-border-secondary) !important",
-);
-
 $position-values: (
   relative: relative,
-  absolute: absolute
+  absolute: absolute,
+  fixed: fixed,
 );
 
 $flex-align-values: (
@@ -118,4 +107,8 @@ $shadow-values: (
   null: 0 .5rem 1rem rgba(0, 0, 0, .15),
   sm: 0 .125rem .25rem rgba(0, 0, 0, .075),
   lg: 0 1rem 3rem rgba(0, 0, 0, .175),
+);
+
+$size-values: (
+  100: 100%,
 );

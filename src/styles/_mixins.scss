@@ -9,7 +9,11 @@
 
       .#{$class} {
         @each $attr in map-get($map-item, "attrs") {
-          #{$attr}: #{$value};
+          @if map-get($map-item, "important") {
+            #{$attr}: #{$value} !important;
+          } @else {
+            #{$attr}: #{$value};
+          }
         }
       }
     }

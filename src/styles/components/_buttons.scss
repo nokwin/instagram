@@ -8,4 +8,10 @@
     pointer-events: none;
     opacity: 0.3;
   }
+
+  &--actionable {
+    &:active {
+      background-color: var(--color-bg-white-10);
+    }
+  }
 }

@@ -1,0 +1,14 @@
+$sizing-utils: (
+  (
+    class: width,
+    attrs: width,
+    values: $size-values,
+  ),
+  (
+    class: height,
+    attrs: height,
+    values: $size-values,
+  ),
+);
+
+@include generate-utils($sizing-utils);

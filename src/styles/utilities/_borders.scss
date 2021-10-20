@@ -5,6 +5,12 @@ $border-utils: (
     values: $borders-values,
   ),
   (
+    class: border-bottom-i,
+    attrs: border-bottom,
+    values: $borders-values,
+    important: true
+  ),
+  (
     class: border-top,
     attrs: border-top,
     values: $borders-values,
@@ -27,7 +33,8 @@ $border-utils: (
   (
     class: border-i,
     attrs: border-color,
-    values: $borders-colors-important,
+    values: $borders-colors,
+    important: true
   )
 );
 

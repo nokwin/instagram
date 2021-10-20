@@ -13,11 +13,16 @@ type PostProps = {
   item: PostEntity;
 
   setCardPosition(x: number, y: number): void;
+  openActions(): void;
 };
 
 const POST_HEADER_HEIGHT = 30;
 
-export const Post: React.FC<PostProps> = ({ item, setCardPosition }) => {
+export const Post: React.FC<PostProps> = ({
+  item,
+  setCardPosition,
+  openActions,
+}) => {
   const onProfileLinkHover = (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {
@@ -42,7 +47,7 @@ export const Post: React.FC<PostProps> = ({ item, setCardPosition }) => {
           />
           <span className="fw-semibold">{item.author.username}</span>
         </a>
-        <button className="btn">
+        <button className="btn" onClick={openActions}>
           <MoreIcon />
         </button>
       </div>

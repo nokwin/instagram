@@ -7,7 +7,8 @@ $spacing-utils: (
   (
     class: p-i,
     attrs: padding-top padding-right padding-bottom padding-left,
-    values: $spacers-important,
+    values: $spacers,
+    important: true
   ),
   (
     class: px,
@@ -20,9 +21,16 @@ $spacing-utils: (
     values: $spacers,
   ),
   (
+    class: py-i,
+    attrs: padding-top padding-bottom,
+    values: $spacers,
+    important: true,
+  ),
+  (
     class: ps,
     attrs: padding-left,
-    values: $spacers-important,
+    values: $spacers,
+    important: true
   ),
   (
     class: m,

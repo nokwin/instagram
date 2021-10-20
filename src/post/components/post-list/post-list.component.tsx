@@ -3,6 +3,7 @@ import { observer } from "mobx-react";
 import { usePostService } from "../../domain/post.service";
 import { Post } from "../post/post.component";
 import { ProfileCard } from "../profile-card/profile-card.component";
+import { PostActions } from "../post-actions/post-actions.component";
 
 export const PostList = observer(() => {
   const postService = usePostService();
@@ -22,17 +23,24 @@ export const PostList = observer(() => {
   }, []);
   const closeCard = () => setIsProfileCardVisible(false);
 
+  const [isActionsModalVisible, setIsActionsModalVisible] = useState(false);
+  const openActions = useCallback(() => {
+    setIsActionsModalVisible(true);
+  }, []);
+  const closeActions = () => setIsActionsModalVisible(false);
+
   return (
     <>
       {isProfileCardVisible && (
         <ProfileCard position={profileCardPosition} close={closeCard} />
       )}
-      ;
+      {isActionsModalVisible && <PostActions closeActions={closeActions} />}
       {postService.posts.map((p) => (
         <Post
           key={`post-${p.id}`}
           item={p}
           setCardPosition={assignProfileCardPosition}
+          openActions={openActions}
         />
       ))}
     </>
