@@ -1,0 +1,9 @@
+$position-utils: (
+  (
+    class: position,
+    attrs: position,
+    values: $position-values,
+  ),
+);
+
+@include generate-utils($position-utils);

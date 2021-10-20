@@ -10,6 +10,11 @@ $border-utils: (
     values: $borders-values,
   ),
   (
+    class: border,
+    attrs: border,
+    values: $borders-values,
+  ),
+  (
     class: rounded,
     attrs: border-radius,
     values: $borders-rounding,
@@ -18,6 +23,11 @@ $border-utils: (
     class: border,
     attrs: border-color,
     values: $borders-colors,
+  ),
+  (
+    class: border-i,
+    attrs: border-color,
+    values: $borders-colors-important,
   )
 );
 

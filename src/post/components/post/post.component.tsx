@@ -1,7 +1,5 @@
 import { DateTime } from "luxon";
 import "./post.styles.scss";
-import avatarJpg from "./mock/avatar.jpg";
-import photoJpg from "./mock/photo.jpg";
 import { ReactComponent as MoreIcon } from "../../../assets/icons/more.svg";
 import { ReactComponent as LikeIcon } from "../../../assets/icons/like.svg";
 import { ReactComponent as CommentIcon } from "../../../assets/icons/comment.svg";
@@ -13,16 +11,33 @@ import { Comment } from "../comment/comment.component";
 
 type PostProps = {
   item: PostEntity;
+
+  setCardPosition(x: number, y: number): void;
 };
 
-export const Post: React.FC<PostProps> = ({ item }) => {
+const POST_HEADER_HEIGHT = 30;
+
+export const Post: React.FC<PostProps> = ({ item, setCardPosition }) => {
+  const onProfileLinkHover = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    setCardPosition(
+      e.currentTarget.offsetLeft,
+      e.currentTarget.offsetTop + POST_HEADER_HEIGHT
+    );
+  };
+
   return (
     <div className="post bg-primary mb-4">
       <div className="post__header d-flex align-items-center justify-content-between px-4 py-3">
-        <a href="#" className="d-flex align-items-center gap-4">
+        <a
+          href="#"
+          className="post__author d-flex align-items-center gap-4"
+          onMouseEnter={onProfileLinkHover}
+        >
           <img
             src={item.author.avatar}
-            alt="asafevstas"
+            alt={item.author.username}
             className="post__avatar rounded-circle"
           />
           <span className="fw-semibold">{item.author.username}</span>

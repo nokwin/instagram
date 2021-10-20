@@ -4,6 +4,11 @@ $background-utils: (
     attrs: background-color,
     values: $bg-colors,
   ),
+  (
+    class: bg,
+    attrs: background-size,
+    values: $bg-size-values,
+  ),
 );
 
 @include generate-utils($background-utils);

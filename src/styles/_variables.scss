@@ -39,6 +39,10 @@ $bg-colors: (
   secondary: var(--color-bg-secondary),
 );
 
+$bg-size-values: (
+  cover: cover,
+);
+
 $text-colors: (
   primary: var(--color-font-primary),
   secondary: var(--color-font-secondary),
@@ -53,13 +57,18 @@ $text-transformers: (
   uppercase: uppercase,
 );
 
+$text-align-values: (
+  center: center,
+);
+
 $overflow-values: (
   hidden: hidden,
 );
 
 $display-values: (
   flex: flex,
-  block: block
+  block: block,
+  none: none,
 );
 
 $borders-values: (
@@ -68,9 +77,45 @@ $borders-values: (
 
 $borders-rounding: (
   circle: 50%,
+  null: 1rem,
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
 );
 
 $borders-colors: (
   primary: var(--color-border-primary),
   secondary: var(--color-border-secondary),
+);
+
+$borders-colors-important: (
+  primary: "var(--color-border-primary) !important",
+  secondary: "var(--color-border-secondary) !important",
+);
+
+$position-values: (
+  relative: relative,
+  absolute: absolute
+);
+
+$flex-align-values: (
+  center: center,
+  between: space-between,
+);
+
+$flex-direction-values: (
+  row: row,
+  column: column,
+);
+
+$flex-grow-values: (
+  0: 0,
+  1: 1,
+);
+
+$shadow-values: (
+  null: 0 .5rem 1rem rgba(0, 0, 0, .15),
+  sm: 0 .125rem .25rem rgba(0, 0, 0, .075),
+  lg: 0 1rem 3rem rgba(0, 0, 0, .175),
 );

@@ -1,7 +1,24 @@
-.align-items-center {
-  align-items: center;
-}
+$flex-utils: (
+  (
+    class: align-items,
+    attrs: align-items,
+    values: $flex-align-values,
+  ),
+  (
+    class: justify-content,
+    attrs: justify-content,
+    values: $flex-align-values,
+  ),
+  (
+    class: flex,
+    attrs: flex-direction,
+    values: $flex-direction-values,
+  ),
+  (
+    class: flex-grow,
+    attrs: flex-grow,
+    values: $flex-grow-values,
+  ),
+);
 
-.justify-content-between {
-  justify-content: space-between;
-}
+@include generate-utils($flex-utils);

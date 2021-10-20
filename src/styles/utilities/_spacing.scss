@@ -30,8 +30,18 @@ $spacing-utils: (
     values: $spacers,
   ),
   (
+    class: mt,
+    attrs: margin-top,
+    values: $spacers,
+  ),
+  (
     class: mb,
     attrs: margin-bottom,
+    values: $spacers,
+  ),
+  (
+    class: ms,
+    attrs: margin-left,
     values: $spacers,
   ),
   (

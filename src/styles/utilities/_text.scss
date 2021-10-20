@@ -13,7 +13,12 @@ $text-utils: (
     class: text,
     attrs: text-transform,
     values: $text-transformers,
-  )
+  ),
+  (
+    class: text,
+    attrs: text-align,
+    values: $text-align-values,
+  ),
 );
 
 @include generate-utils($text-utils);

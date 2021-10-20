@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { App } from "./App";
 import "./styles/index.scss";
 import "./infra/api-mock";
-import "./infra/injectAll";
+import "./infra/inject-all";
 
 ReactDOM.render(
   <React.StrictMode>

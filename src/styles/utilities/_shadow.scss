@@ -1,0 +1,9 @@
+$shadow-utils: (
+  (
+    class: shadow,
+    attrs: box-shadow,
+    values: $shadow-values,
+  ),
+);
+
+@include generate-utils($shadow-utils);
