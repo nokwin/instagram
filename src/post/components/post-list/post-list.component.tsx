@@ -35,14 +35,16 @@ export const PostList = observer(() => {
         <ProfileCard position={profileCardPosition} close={closeCard} />
       )}
       {isActionsModalVisible && <PostActions closeActions={closeActions} />}
-      {postService.posts.map((p) => (
-        <Post
-          key={`post-${p.id}`}
-          item={p}
-          setCardPosition={assignProfileCardPosition}
-          openActions={openActions}
-        />
-      ))}
+      <div className="d-flex align-items-center flex-column">
+        {postService.posts.map((p) => (
+          <Post
+            key={`post-${p.id}`}
+            item={p}
+            setCardPosition={assignProfileCardPosition}
+            openActions={openActions}
+          />
+        ))}
+      </div>
     </>
   );
 });
