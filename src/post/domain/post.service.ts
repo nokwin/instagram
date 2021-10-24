@@ -7,6 +7,7 @@ export const POST_SERVICE = "POST_SERVICE";
 
 export class PostService {
   private _posts: Post[] = [];
+  private _newPost: File | null = null;
 
   constructor(
     private readonly postRepo = injector.get<PostHttpRepo>(POST_HTTP_REPO)
@@ -16,6 +17,14 @@ export class PostService {
 
   public get posts(): Post[] {
     return this._posts;
+  }
+
+  public get newPost(): File | null {
+    return this._newPost;
+  }
+
+  public set newPost(value: File | null) {
+    this._newPost = value;
   }
 
   public async getPosts() {

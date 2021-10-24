@@ -1,7 +1,7 @@
 import logoImg from "../../../assets/logo.png";
 import "./header.styles.scss";
 import { ReactComponent as HomeIcon } from "../../../assets/icons/home.svg";
-import { ReactComponent as CameraIcon } from "../../../assets/icons/camera.svg";
+import { ImageSelector } from "../../../post/components/image-selector/image-selector.component";
 
 export const Header = () => {
   return (
@@ -13,9 +13,7 @@ export const Header = () => {
         <a href="#" className="p-2">
           <HomeIcon />
         </a>
-        <button className="btn">
-          <CameraIcon />
-        </button>
+        <ImageSelector />
       </nav>
     </header>
   );

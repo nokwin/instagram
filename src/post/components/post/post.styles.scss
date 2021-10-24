@@ -1,5 +1,7 @@
+@import '../../../styles/variables';
+
 .post {
-  max-width: 600px;
+  max-width: $content-max-width;
 
   &__avatar {
     height: 32px;

@@ -24,3 +24,9 @@
 - Added camera icon to header
 - Extended utility styles
 - Extended generate-utils mixin to support imporant attribute
+
+## Day 3 [24.10.2021]
+
+- Started working on creating post page
+- Added react-cropper for cropping images
+- Added react-slick for implementing filters carousel

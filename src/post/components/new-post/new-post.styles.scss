@@ -1,0 +1,23 @@
+@import '../../../styles/variables';
+
+.new-post {
+  max-width: $content-max-width;
+
+  &__canvas {
+    height: 600px;
+  }
+
+  .cropper {
+    &-line, &-point, &-center {
+      display: none;
+    }
+
+    &-view-box {
+      outline: none;
+    }
+
+    &-face {
+      background-color: none;
+    }
+  }
+}
